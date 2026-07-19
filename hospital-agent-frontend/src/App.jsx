@@ -6,7 +6,7 @@ import AgentTrace from './components/AgentTrace.jsx'
 import LocationGate from './components/LocationGate.jsx'
 import './App.css'
 
-const API_URL = 'https://hospital-management-agent.onrender.com'
+const API_URL = 'https://hospital-management-agent.onrender.com/triage'
 
 function App() {
   const [location, setLocation] = useState(null) // { latitude, longitude }
