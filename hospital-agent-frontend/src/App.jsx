@@ -49,7 +49,7 @@ function App() {
         )
       } else if (err.request) {
         setError(
-          'Could not reach the backend server. Make sure it is running at http://localhost:8000.'
+          'Could not reach the backend server. Please check your network or try again in a few seconds while server warms up.'
         )
       } else {
         setError('Something went wrong while submitting the form. Please try again.')
