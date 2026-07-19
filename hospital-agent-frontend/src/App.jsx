@@ -6,7 +6,7 @@ import AgentTrace from './components/AgentTrace.jsx'
 import LocationGate from './components/LocationGate.jsx'
 import './App.css'
 
-const API_URL = 'http://localhost:8000/triage'
+const API_URL = 'https://hospital-management-agent.onrender.com'
 
 function App() {
   const [location, setLocation] = useState(null) // { latitude, longitude }
@@ -44,8 +44,7 @@ function App() {
     } catch (err) {
       if (err.response) {
         setError(
-          `Server error (${err.response.status}): ${
-            err.response.data?.detail || 'Unable to process triage request.'
+          `Server error (${err.response.status}): ${err.response.data?.detail || 'Unable to process triage request.'
           }`
         )
       } else if (err.request) {
