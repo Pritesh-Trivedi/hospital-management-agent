@@ -1,0 +1,26 @@
+patient_id,name,age,symptoms,ward,priority,doctor,admission_time
+P1001,Rahul,52,Chest pain and difficulty breathing,Emergency,High,Dr. Rao,2026-07-18 09:10:35
+P1002,Rahul,52,Chest pain and difficulty breathing,Emergency,High,Dr. Khan,2026-07-18 09:13:45
+P1003,amey,20,chest pain,Emergency,High,Dr. Rao,2026-07-18 11:50:23
+P1004,Amey Manoj,20,Mild fever and headache,General,Low,Dr. Iyer,2026-07-18 11:51:35
+P1005,Amey Manoj,20,high fever,Emergency,High,Dr. Khan,2026-07-18 12:05:52
+P1006,Amey Manoj,20,stomach pain,Emergency,Medium,Dr. Rao,2026-07-18 12:33:39
+P1007,Amey Manoj,20,head ache,General,Medium,Dr. Iyer,2026-07-18 12:39:14
+P1008,Amey Manoj,20,pain in hand,General,Medium,Dr. Sharma,2026-07-18 12:48:19
+P1009,Amey Manoj,20,pain in hand,General,Medium,Dr. Iyer,2026-07-18 13:25:07
+P1010,Amey Manoj,20,pain in hand,General,Medium,Dr. Sharma,2026-07-18 13:26:56
+P1011,Amey Manoj,20,pain in leg,General,Medium,Dr. Iyer,2026-07-18 13:32:48
+P1012,Amey Manoj,20,pain in head,Emergency,High,Dr. Khan,2026-07-18 16:59:40
+P1013,Amey Manoj,20,pain in head,Emergency,High,Dr. Rao,2026-07-18 17:07:32
+P1014,Amey Manoj,20,pain in head,Emergency,High,No doctor available,2026-07-18 17:14:19
+P1015,Amey Manoj,20,fever,General,Medium,Dr. Sharma,2026-07-18 17:16:58
+P1016,Amey Manoj,20,fever,General,Medium,Dr. Iyer,2026-07-18 17:21:39
+P1017,Amey Manoj,20,fever,General,Medium,Dr. Sharma,2026-07-18 17:25:22
+P1018,Amey Manoj,20,stomach pain,Emergency,Medium,No doctor available,2026-07-19 01:20:25
+P1019,Amey Manoj,20,fever,Emergency,High,No doctor available,2026-07-19 01:33:43
+P1020,Pritesh,20,high bp,Emergency,High,No doctor available,2026-07-19 19:43:53
+P1021,Pritesh,40,heart attack,Emergency,High,No doctor available,2026-07-19 20:00:08
+P1022,Pritesh,40,heart attack,Emergency,High,No doctor available,2026-07-19 20:01:22
+P1023,Pritesh,40,attack,Emergency,High,No doctor available,2026-07-19 20:03:59
+P1024,pritesh,2,attack,Emergency,High,No doctor available,2026-07-19 20:05:27
+P1025,pritesh,55,attack,Emergency,High,No doctor available,2026-07-19 20:07:36

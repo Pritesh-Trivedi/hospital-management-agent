@@ -1,0 +1,11 @@
+appointment_id,patient_id,doctor,hospital,appointment_time,token_number,consultation_room
+A1001,P1016,Dr. Iyer,Karuna Hospital,19:05,T001,GEN-1
+A1002,P1017,Dr. Sharma,Karuna Hospital,19:25,T001,GEN-1
+A1003,P1018,No doctor available,Apex Superspeciality Hospital,,T001,ER-1
+A1004,P1019,No doctor available,Shreejii Hospital and Research Centre,,T002,ER-2
+A1005,P1020,No doctor available,Surana Hospital and Research Center,,T003,ER-3
+A1006,P1021,No doctor available,Surana Hospital and Research Center,,T004,ER-4
+A1007,P1022,No doctor available,Surana Hospital and Research Center,,T005,ER-5
+A1008,P1023,No doctor available,Surana Hospital and Research Center,,T006,ER-1
+A1009,P1024,No doctor available,Surana Hospital and Research Center,,T007,ER-2
+A1010,P1025,No doctor available,Kapadia Hospital,,T008,ER-3

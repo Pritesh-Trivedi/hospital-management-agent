@@ -1,0 +1,2 @@
+notification_id,patient_id,patient_name,doctor,ward,message,time,status
+N1001,P1001,Rahul,Dr. Rao,Emergency,Patient should report to Emergency ward under Dr. Rao.,2026-07-18 09:10:35,Pending

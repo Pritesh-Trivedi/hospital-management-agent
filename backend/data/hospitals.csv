@@ -1,0 +1,13 @@
+hospital_id,hospital_name,address,latitude,longitude,rating,specialties,queue_length
+H001,Karuna Hospital,"Jeevan Bima Nagar, Borivali West, Mumbai 400103",19.2288,72.8567,4.2,"emergency,general,mental_health",5
+H002,Apex Superspeciality Hospital,"L.T. Road, Babhai Naka, Borivali West, Mumbai 400092",19.2350,72.8481,4.5,"emergency,general",9
+H003,Lilavati Hospital,"A-791, Bandra Reclamation, Bandra West, Mumbai 400050",19.0508,72.8295,4.4,"emergency,general,mental_health",22
+H004,Kokilaben Dhirubhai Ambani Hospital,"Rao Saheb Achutrao Patwardhan Marg, Four Bungalows, Andheri West, Mumbai 400053",19.1300,72.8250,4.6,"emergency,general,mental_health",26
+H005,Fortis Hospital Mulund,"Mulund Goregaon Link Road, Mulund West, Mumbai 400078",19.1728,72.9425,4.3,"emergency,general",11
+H006,Shreejii Hospital and Research Centre,"Kandivali West, Mumbai 400067",19.2095,72.8384,4.1,"emergency,general",7
+H007,Vardann Multi Speciality Hospital,"Swami Vivekananda Road, Kandivali West, Mumbai 400067",19.2050,72.8410,4.0,"general",6
+H008,Surana Hospital and Research Center,"S.V. Road, Malad West, Mumbai 400064",19.1860,72.8490,4.3,"emergency,general,mental_health",14
+H009,Cloudnine Hospital,"Malad West, Mumbai 400064",19.1830,72.8470,4.4,"general",10
+H010,SRV Hospital,"Goregaon West, Mumbai 400062",19.1663,72.8526,4.2,"emergency,general",13
+H011,Kapadia Hospital,"Goregaon West, Mumbai 400062",19.1670,72.8500,4.5,"emergency,general",8
+H012,Seven Hills Hospital,"Andheri East, Mumbai 400093",19.1197,72.8697,4.3,"emergency,general,mental_health",20

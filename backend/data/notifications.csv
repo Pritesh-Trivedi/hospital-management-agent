@@ -1,0 +1,25 @@
+notification_id,patient_id,patient_name,doctor,ward,message,time,status
+N1001,P1002,Rahul,Dr. Khan,Emergency,Patient should report to Emergency ward under Dr. Khan.,2026-07-18 09:13:45,Pending
+N1002,P1003,amey,Dr. Rao,Emergency,Patient should report to Emergency ward under Dr. Rao.,2026-07-18 11:50:23,Pending
+N1003,P1004,Amey Manoj,Dr. Iyer,General,Patient should report to General ward under Dr. Iyer.,2026-07-18 11:51:35,Pending
+N1004,P1005,Amey Manoj,Dr. Khan,Emergency,Patient should report to Emergency ward under Dr. Khan.,2026-07-18 12:05:52,Pending
+N1005,P1006,Amey Manoj,Dr. Rao,Emergency,Patient should report to Emergency ward under Dr. Rao.,2026-07-18 12:33:39,Pending
+N1006,P1007,Amey Manoj,Dr. Iyer,General,Patient should report to General ward under Dr. Iyer.,2026-07-18 12:39:14,Pending
+N1007,P1008,Amey Manoj,Dr. Sharma,General,Patient should report to General ward under Dr. Sharma.,2026-07-18 12:48:19,Pending
+N1008,P1009,Amey Manoj,Dr. Iyer,General,Patient should report to General ward under Dr. Iyer.,2026-07-18 13:25:07,Pending
+N1009,P1010,Amey Manoj,Dr. Sharma,General,Patient should report to General ward under Dr. Sharma.,2026-07-18 13:26:56,Pending
+N1010,P1011,Amey Manoj,Dr. Iyer,General,Patient should report to General ward under Dr. Iyer.,2026-07-18 13:32:48,Pending
+N1011,P1012,Amey Manoj,Dr. Khan,Emergency,Patient should report to Emergency ward under Dr. Khan.,2026-07-18 16:59:40,Pending
+N1012,P1013,Amey Manoj,Dr. Rao,Emergency,Patient should report to Emergency ward under Dr. Rao.,2026-07-18 17:07:32,Pending
+N1013,P1014,Amey Manoj,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-18 17:14:19,Pending
+N1014,P1015,Amey Manoj,Dr. Sharma,General,Patient should report to General ward under Dr. Sharma.,2026-07-18 17:16:58,Pending
+N1015,P1016,Amey Manoj,Dr. Iyer,General,Patient should report to General ward under Dr. Iyer.,2026-07-18 17:21:39,Pending
+N1016,P1017,Amey Manoj,Dr. Sharma,General,Patient should report to General ward under Dr. Sharma.,2026-07-18 17:25:22,Pending
+N1017,P1018,Amey Manoj,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 01:20:25,Pending
+N1018,P1019,Amey Manoj,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 01:33:43,Pending
+N1019,P1020,Pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 19:43:54,Pending
+N1020,P1021,Pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 20:00:08,Pending
+N1021,P1022,Pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 20:01:23,Pending
+N1022,P1023,Pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 20:03:59,Pending
+N1023,P1024,pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 20:05:27,Pending
+N1024,P1025,pritesh,No doctor available,Emergency,Patient should report to Emergency ward under No doctor available.,2026-07-19 20:07:36,Pending

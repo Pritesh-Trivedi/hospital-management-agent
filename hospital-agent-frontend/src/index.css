@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #edf3f7;
+  --color-bg-alt: #ffffff;
+  --color-primary: #0c6e82;
+  --color-primary-dark: #084f5f;
+  --color-primary-light: #e3f4f7;
+  --color-text: #14232b;
+  --color-text-muted: #5c7078;
+  --color-border: #dce8ec;
+
+  --color-signal: #04b892;
+  --color-signal-soft: #d9f5ee;
+
+  --color-accent: #d99a2b;
+  --color-accent-dark: #a97819;
+  --color-accent-soft: #fbf1de;
+
+  --color-emergency: #d64545;
+  --color-emergency-bg: #fdeaea;
+  --color-general: #2f6fed;
+  --color-general-bg: #e8f0fe;
+  --color-mental: #8b5cf6;
+  --color-mental-bg: #f2ecfd;
+
+  --color-high: #d64545;
+  --color-high-bg: #fdeaea;
+  --color-medium: #e08a2b;
+  --color-medium-bg: #fdf1e2;
+  --color-low: #2b9e5b;
+  --color-low-bg: #e7f7ee;
+
+  --shadow-sm: 0 1px 3px rgba(16, 42, 51, 0.08);
+  --shadow-md: 0 8px 24px rgba(16, 42, 51, 0.10);
+  --shadow-lg: 0 20px 48px rgba(16, 42, 51, 0.14);
+
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --font-display: 'Sora', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(15, 122, 140, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
