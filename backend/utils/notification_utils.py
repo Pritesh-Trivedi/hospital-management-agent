@@ -212,14 +212,14 @@ def send_email_notification(state):
             )
 
             if res.status_code == 200:
-                print(f"📧 Live Email sent via EmailJS successfully to {recipient}")
+                print(f"[EMAIL] Live Email sent via EmailJS successfully to {recipient}")
                 return True, f"Email sent via EmailJS to {recipient}"
             else:
-                print(f"⚠️ EmailJS API error ({res.status_code}): {res.text}")
-                return False, f"EmailJS Error ({res.status_code}): {res.text}"
+                print(f"[EMAIL] EmailJS API error ({res.status_code}): {res.text}")
+                return False, "Email notification unavailable (development mode)"
         except Exception as e:
-            print(f"⚠️ Exception during EmailJS send to {recipient}: {str(e)}")
-            return False, f"EmailJS Exception: {str(e)}"
+            print(f"[EMAIL] Exception during EmailJS send to {recipient}: {str(e)}")
+            return False, "Email notification unavailable (development mode)"
 
     # 2. Check SMTP credentials from environment
     smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
@@ -243,17 +243,17 @@ def send_email_notification(state):
                 server.login(smtp_username, smtp_password)
                 server.send_message(msg)
 
-            print(f"📧 Live Email sent successfully to {recipient}")
+            print(f"[EMAIL] Live Email sent successfully to {recipient}")
             return True, f"Email sent successfully to {recipient}"
         except Exception as e:
-            print(f"⚠️ Failed to send SMTP email to {recipient}: {str(e)}")
-            return False, f"SMTP Error: {str(e)}"
+            print(f"[EMAIL] Failed to send SMTP email to {recipient}: {str(e)}")
+            return False, "Email notification unavailable (development mode)"
     else:
         # Simulation mode when no EmailJS or SMTP credentials configured
         print("\n" + "="*50)
-        print(f"📧 [EMAIL SIMULATION] To: {recipient}")
-        print(f"Subject: {subject}")
+        print(f"[EMAIL] [SIMULATION] To: {recipient}")
+        print("Subject: " + subject.encode("ascii", "ignore").decode("ascii"))
         print(text_content.strip())
         print("="*50 + "\n")
-        return True, f"Email notification simulated for {recipient} (Configure EmailJS or SMTP in .env for live sending)"
+        return False, "Email notification unavailable (development mode)"
 

@@ -1,3 +1,4 @@
 ambulance_id,patient_id,ward,assigned_doctor,eta_minutes,status,created_at
 AMB-20260721073315-238,P1234,Emergency,Dr. Rao,16,Dispatched,2026-07-21 07:33:15
 AMB-20260721073601-759,P1028,Emergency,No doctor available,11,Dispatched,2026-07-21 07:36:01
+AMB-20260721084101-630,P1029,Emergency,No doctor available,16,Dispatched,2026-07-21 08:41:01
