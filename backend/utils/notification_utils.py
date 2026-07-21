@@ -1,9 +1,11 @@
+import os
 import pandas as pd
 from datetime import datetime
+from config import DATA_DIR, get_env
 
 def generate_notification_id():
 
-    notifications = pd.read_csv("data/notifications.csv")
+    notifications = pd.read_csv(DATA_DIR / "notifications.csv")
 
     if len(notifications) == 0:
         return "N1001"
@@ -15,7 +17,7 @@ def generate_notification_id():
     return f"N{number + 1}"
 def create_notification(state):
 
-    notifications = pd.read_csv("data/notifications.csv")
+    notifications = pd.read_csv(DATA_DIR / "notifications.csv")
 
     notification_id = generate_notification_id()
 
@@ -44,13 +46,12 @@ def create_notification(state):
         ignore_index=True
     )
 
-    notifications.to_csv("data/notifications.csv", index=False)
+    notifications.to_csv(DATA_DIR / "notifications.csv", index=False)
 
     return notification_id
 
 
 def send_email_notification(state):
-    import os
     import smtplib
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
@@ -152,13 +153,10 @@ def send_email_notification(state):
     """
 
     # 1. Check EmailJS configuration
-    from dotenv import load_dotenv
-    load_dotenv(override=True)
-
-    emailjs_service_id = os.getenv("EMAILJS_SERVICE_ID")
-    emailjs_template_id = os.getenv("EMAILJS_TEMPLATE_ID")
-    emailjs_public_key = os.getenv("EMAILJS_PUBLIC_KEY")
-    emailjs_private_key = os.getenv("EMAILJS_PRIVATE_KEY")
+    emailjs_service_id = get_env("EMAILJS_SERVICE_ID")
+    emailjs_template_id = get_env("EMAILJS_TEMPLATE_ID")
+    emailjs_public_key = get_env("EMAILJS_PUBLIC_KEY")
+    emailjs_private_key = get_env("EMAILJS_PRIVATE_KEY")
 
     if emailjs_service_id and emailjs_template_id and emailjs_public_key:
         try:
@@ -222,11 +220,11 @@ def send_email_notification(state):
             return False, "Email notification unavailable (development mode)"
 
     # 2. Check SMTP credentials from environment
-    smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
-    smtp_port = int(os.getenv("SMTP_PORT", "587"))
-    smtp_username = os.getenv("SMTP_USERNAME")
-    smtp_password = os.getenv("SMTP_PASSWORD")
-    sender_email = os.getenv("SENDER_EMAIL", smtp_username or "noreply@hospital-agent.ai")
+    smtp_server = get_env("SMTP_SERVER", "smtp.gmail.com")
+    smtp_port = int(get_env("SMTP_PORT", "587"))
+    smtp_username = get_env("SMTP_USERNAME")
+    smtp_password = get_env("SMTP_PASSWORD")
+    sender_email = get_env("SENDER_EMAIL", smtp_username or "noreply@hospital-agent.ai")
 
     if smtp_username and smtp_password:
         try:

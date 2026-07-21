@@ -1,5 +1,6 @@
 import pandas as pd
 
+from config import DATA_DIR
 from utils.location_utils import haversine_distance_km
 from nodes.hospital_selection import score_hospital
 
@@ -18,8 +19,8 @@ def bed_allocation_node(state):
         return state
 
     ward = state["ward"].strip().lower().replace(" ", "_")
-    beds = pd.read_csv("data/beds.csv")
-    hospitals = pd.read_csv("data/hospitals.csv")
+    beds = pd.read_csv(DATA_DIR / "beds.csv")
+    hospitals = pd.read_csv(DATA_DIR / "hospitals.csv")
 
     current_hospital_id = state["hospital_id"]
 
@@ -60,7 +61,7 @@ def bed_allocation_node(state):
                 (beds["hospital_id"] == hospital_id) & (beds["ward"] == ward),
                 "occupied_beds"
             ] += 1
-            beds.to_csv("data/beds.csv", index=False)
+            beds.to_csv(DATA_DIR / "beds.csv", index=False)
 
             if hospital_id != current_hospital_id:
                 new_hospital = hospitals[hospitals["hospital_id"] == hospital_id].iloc[0]

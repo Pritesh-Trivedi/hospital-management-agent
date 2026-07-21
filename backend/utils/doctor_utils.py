@@ -1,8 +1,7 @@
 import pandas as pd
 from datetime import datetime, timedelta
 from pathlib import Path
-
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+from config import DATA_DIR
 
 
 def _data_path(filename):

@@ -1,13 +1,20 @@
+import os
+import sys
+from pathlib import Path
+
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
-from dotenv import load_dotenv
 from graph import graph
 from utils.doctor_utils import get_available_doctors, change_doctor
 from utils.ambulance_utils import create_ambulance_request
 from fastapi.middleware.cors import CORSMiddleware
 
-load_dotenv(override=True)
+os.chdir(BACKEND_DIR)
 
 app = FastAPI()
 

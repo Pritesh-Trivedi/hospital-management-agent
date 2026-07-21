@@ -1,9 +1,10 @@
 import pandas as pd
 from datetime import datetime
+from config import DATA_DIR
 
 def generate_patient_id():
 
-    patients = pd.read_csv("data/patients.csv")
+    patients = pd.read_csv(DATA_DIR / "patients.csv")
 
     if len(patients) == 0:
         return "P1001"
@@ -15,7 +16,7 @@ def generate_patient_id():
     return f"P{number + 1}"
 def save_patient(state):
 
-    patients = pd.read_csv("data/patients.csv")
+    patients = pd.read_csv(DATA_DIR / "patients.csv")
 
     patient_id = generate_patient_id()
 
@@ -35,6 +36,6 @@ def save_patient(state):
         ignore_index=True
     )
 
-    patients.to_csv("data/patients.csv", index=False)
+    patients.to_csv(DATA_DIR / "patients.csv", index=False)
 
     return patient_id

@@ -1,4 +1,5 @@
 import pandas as pd
+from config import DATA_DIR
 
 WARD_ROOM_PREFIX = {
     "emergency": "ER",
@@ -9,7 +10,7 @@ WARD_ROOM_PREFIX = {
 
 def generate_appointment_id():
 
-    appointments = pd.read_csv("data/appointments.csv")
+    appointments = pd.read_csv(DATA_DIR / "appointments.csv")
 
     if len(appointments) == 0:
         return "A1001"
@@ -22,7 +23,7 @@ def generate_appointment_id():
 
 def book_appointment(state):
 
-    appointments = pd.read_csv("data/appointments.csv")
+    appointments = pd.read_csv(DATA_DIR / "appointments.csv")
 
     appointment_id = generate_appointment_id()
 
@@ -51,7 +52,7 @@ def book_appointment(state):
         ignore_index=True
     )
 
-    appointments.to_csv("data/appointments.csv", index=False)
+    appointments.to_csv(DATA_DIR / "appointments.csv", index=False)
 
     return {
         "appointment_id": appointment_id,

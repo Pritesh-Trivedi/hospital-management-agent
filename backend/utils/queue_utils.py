@@ -1,9 +1,10 @@
 import pandas as pd
+from config import DATA_DIR
 
 
 def add_to_queue(state):
 
-    queue = pd.read_csv("data/queue.csv")
+    queue = pd.read_csv(DATA_DIR / "queue.csv")
 
     hospital_queue = queue[queue["hospital_id"] == state["hospital_id"]]
     queue_position = len(hospital_queue) + 1
@@ -25,7 +26,7 @@ def add_to_queue(state):
         ignore_index=True
     )
 
-    queue.to_csv("data/queue.csv", index=False)
+    queue.to_csv(DATA_DIR / "queue.csv", index=False)
 
     return {
         "queue_position": queue_position,

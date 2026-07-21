@@ -1,15 +1,12 @@
-import os
 import pandas as pd
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 
+from config import DATA_DIR, get_env
 from utils.location_utils import haversine_distance_km
-
-load_dotenv()
 
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=get_env("GROQ_API_KEY")
 )
 
 # Weights for the scoring formula — tweak these if you want distance
@@ -35,7 +32,7 @@ def hospital_selection_node(state):
 
     ward = state["ward"].strip().lower().replace(" ", "_")
 
-    hospitals = pd.read_csv("data/hospitals.csv")
+    hospitals = pd.read_csv(DATA_DIR / "hospitals.csv")
 
     # Keep only hospitals that support this ward
     matching = hospitals[
