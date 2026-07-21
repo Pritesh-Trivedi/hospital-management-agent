@@ -661,6 +661,87 @@
   opacity: 0.85;
 }
 
+.doctor-change-panel {
+  margin-top: 22px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doctor-change-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.doctor-change-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-change-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.doctor-change-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.doctor-change-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doctor-select-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.doctor-select {
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  background: #fbfdfe;
+}
+
+.doctor-confirm-btn {
+  width: auto;
+  padding: 10px 14px;
+}
+
+.doctor-feedback {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.doctor-feedback--error {
+  color: var(--color-emergency);
+}
+
+.doctor-feedback--success {
+  color: var(--color-primary-dark);
+}
+
 /* ---------- Location confirmed banner ---------- */
 .location-confirmed-banner {
   display: flex;
@@ -880,7 +961,38 @@
   border: 1.5px solid var(--color-emergency);
   border-radius: var(--radius-md);
   padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.ambulance-banner-content {
+  flex: 1;
+}
+
+.ambulance-banner-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ambulance-request-card {
+  border: 1px solid var(--color-emergency);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
   margin-bottom: 20px;
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.ambulance-request-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-emergency);
+  margin-bottom: 10px;
+}
+
+.ambulance-request-grid {
+  display: grid;
+  gap: 10px;
 }
 
 .ambulance-banner-icon {
