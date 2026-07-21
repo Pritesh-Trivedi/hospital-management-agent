@@ -18,6 +18,22 @@
    - `npm install`
    - `npm run dev`
 
+## Email setup (optional but recommended)
+
+The application can send appointment and triage emails through EmailJS. To enable this feature:
+
+1. Create an account at https://www.emailjs.com/
+2. Create an Email Service and note the Service ID.
+3. Create an Email Template and note the Template ID.
+4. Copy your Public Key and Private Key from the EmailJS dashboard.
+5. Add the following values to your `.env` file:
+   - `EMAILJS_SERVICE_ID`
+   - `EMAILJS_TEMPLATE_ID`
+   - `EMAILJS_PUBLIC_KEY`
+   - `EMAILJS_PRIVATE_KEY`
+
+If these values are not provided, the app will continue in development mode and will not break the workflow.
+
 ## Notes
 - The backend loads environment variables from the repository root `.env` first, then `backend/.env`.
 - The application uses a CSV-based data store under `backend/data`.
